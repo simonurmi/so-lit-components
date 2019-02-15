@@ -21,19 +21,28 @@ var Background = function Background(props) {
   var _classNames;
 
   var children = props.children,
-      color = props.color;
-  var classes = (0, _classnames.default)((_classNames = {}, _defineProperty(_classNames, _BackgroundModule.default.Background, true), _defineProperty(_classNames, _BackgroundModule.default['Background--primary'], color === 'primary'), _defineProperty(_classNames, _BackgroundModule.default['Background--light'], color === 'light'), _defineProperty(_classNames, _BackgroundModule.default['Background--dark'], color === 'dark'), _classNames));
+      color = props.color,
+      image = props.image,
+      padding = props.padding;
+  var classes = (0, _classnames.default)((_classNames = {}, _defineProperty(_classNames, _BackgroundModule.default.Background, true), _defineProperty(_classNames, _BackgroundModule.default['Background--primary'], color === 'primary'), _defineProperty(_classNames, _BackgroundModule.default['Background--light'], color === 'light'), _defineProperty(_classNames, _BackgroundModule.default['Background--dark'], color === 'dark'), _defineProperty(_classNames, _BackgroundModule.default['Background--image'], !!image), _defineProperty(_classNames, _BackgroundModule.default['Background--padding-1'], padding === 1), _classNames));
   return _react.default.createElement("div", {
-    className: classes
+    className: classes,
+    style: {
+      backgroundImage: "url(".concat(image, ")")
+    }
   }, children);
 };
 
 Background.propTypes = {
   children: _propTypes.default.node.isRequired,
-  color: _propTypes.default.string
+  color: _propTypes.default.string,
+  image: _propTypes.default.string,
+  padding: _propTypes.default.number
 };
 Background.defaultProps = {
-  color: ''
+  color: null,
+  image: null,
+  padding: null
 };
 var _default = Background;
 exports.default = _default;

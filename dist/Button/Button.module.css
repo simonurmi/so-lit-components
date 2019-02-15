@@ -24,3 +24,13 @@
   color: #fff;
   background-color: #000;
 }
+
+.Button--light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.Button--light:hover {
+  color: #000;
+  background-color: #fff;
+}
