@@ -7,11 +7,10 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Welcome } from '@storybook/react/demo';
 
-import '../index.css';
-
 import Button from '../components/Button/Button';
 import NewsList from '../components/NewsList/NewsList';
 import Background from '../components/Background/Background';
+import Reset from '../components/Reset/Reset';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -61,3 +60,5 @@ storiesOf('NewsList', module).add('index', () => {
     </>
   );
 });
+
+storiesOf('Reset', module).add('index', () => <Reset />);
