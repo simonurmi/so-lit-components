@@ -1,24 +1,17 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = void 0;
 
-var _react = require('react');
+var _react = _interopRequireDefault(require("react"));
 
-var _react2 = _interopRequireDefault(_react);
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _propTypes = require('prop-types');
+var _classnames = _interopRequireDefault(require("classnames"));
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _BackgroundModule = require('./Background.module.css');
-
-var _BackgroundModule2 = _interopRequireDefault(_BackgroundModule);
+var _BackgroundModule = _interopRequireDefault(require("./Background.module.css"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,22 +22,18 @@ var Background = function Background(props) {
 
   var children = props.children,
       color = props.color;
-
-  var classes = (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _BackgroundModule2.default.Background, true), _defineProperty(_classNames, _BackgroundModule2.default['Background--primary'], color === 'primary'), _defineProperty(_classNames, _BackgroundModule2.default['Background--light'], color === 'light'), _defineProperty(_classNames, _BackgroundModule2.default['Background--dark'], color === 'dark'), _classNames));
-  return _react2.default.createElement(
-    'div',
-    { className: classes },
-    children
-  );
+  var classes = (0, _classnames.default)((_classNames = {}, _defineProperty(_classNames, _BackgroundModule.default.Background, true), _defineProperty(_classNames, _BackgroundModule.default['Background--primary'], color === 'primary'), _defineProperty(_classNames, _BackgroundModule.default['Background--light'], color === 'light'), _defineProperty(_classNames, _BackgroundModule.default['Background--dark'], color === 'dark'), _classNames));
+  return _react.default.createElement("div", {
+    className: classes
+  }, children);
 };
 
 Background.propTypes = {
-  children: _propTypes2.default.node.isRequired,
-  color: _propTypes2.default.string
+  children: _propTypes.default.node.isRequired,
+  color: _propTypes.default.string
 };
-
 Background.defaultProps = {
   color: ''
 };
-
-exports.default = Background;
+var _default = Background;
+exports.default = _default;
