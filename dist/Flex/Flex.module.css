@@ -1,0 +1,7 @@
+.Flex {
+  display: flex;
+}
+
+.Flex--alignItemsCenter {
+  align-items: center;
+}

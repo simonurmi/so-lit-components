@@ -1,6 +1,6 @@
 .Container {
   width: 100%;
-  max-width: 960px;
+  max-width: var(--container-width);
   padding-right: 1rem;
   padding-left: 1rem;
   margin-right: auto;

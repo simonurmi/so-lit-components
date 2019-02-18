@@ -5,13 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-require("typeface-roboto");
+require("./Variables.css");
 
-require("./Reset.css");
-
-var Reset = function Reset() {
+var Variables = function Variables() {
   return null;
 };
 
-var _default = Reset;
+var _default = Variables;
 exports.default = _default;

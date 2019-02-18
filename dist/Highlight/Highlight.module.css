@@ -1,0 +1,6 @@
+.Highlight {
+  flex-basis: calc(var(--container-width) / 2);
+  flex-grow: 0;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}

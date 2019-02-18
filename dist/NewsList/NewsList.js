@@ -23,7 +23,7 @@ var NewsList = function NewsList(props) {
       key: item.id
     }, _react.default.createElement("p", {
       className: _NewsListModule.default.NewsList__Category
-    }, item.category), _react.default.createElement("p", {
+    }, item.category), _react.default.createElement("h3", {
       className: _NewsListModule.default.NewsList__Title
     }, _react.default.createElement("a", {
       className: _NewsListModule.default.NewsList__Link,
