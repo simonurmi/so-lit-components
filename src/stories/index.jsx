@@ -6,38 +6,46 @@ import { linkTo } from '@storybook/addon-links';
 import { Welcome } from '@storybook/react/demo';
 import Button from '../components/Button/Button';
 import NewsList from '../components/NewsList/NewsList';
-import Background from '../components/Background/Background';
 import Reset from '../components/Reset/Reset';
 import Container from '../components/Container/Container';
+import Highlight from '../components/Highlight/Highlight';
+import Flex from '../components/Flex/Flex';
+import Navbar from '../components/Navbar/Navbar';
+import Variables from '../components/Variables/Variables';
+import Section from '../components/Section/Section';
+
+storiesOf('Reset', module).add('index', () => <Reset />);
+
+storiesOf('Variables', module).add('index', () => <Variables />);
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module).add('with text', () => (
   <Container>
-    <Background padding={1}>
+    <Section padding={1}>
       <Button>Regular</Button>
-    </Background>
-    <Background color="primary" padding={1}>
+    </Section>
+    <Section backgroundColor="primary" padding={1}>
       <Button color="light">Light</Button>
-    </Background>
+    </Section>
   </Container>
 ));
 
 const newslist = [
   {
-    category: 'Uutiset',
+    category: 'Uutinen',
     href: '#',
     id: 1,
     title: 'Solita avaa toimiston Göteborgiin',
   },
   {
-    category: 'Uutiset',
+    category: 'Uutinen',
     href: '#',
     id: 2,
     title: 'Skanska julkisti Suomen ensimmäisen digitaalisen asuntokaupan palvelun',
   },
   {
-    category: 'Uutiset',
+    category: 'Uutinen',
     href: '#',
     id: 3,
     title: 'Solita laajentaa Saksaan - avaa toimiston Müncheniin',
@@ -46,20 +54,70 @@ const newslist = [
 
 storiesOf('NewsList', module)
   .add('Regular', () => (
-    <Background>
-      <NewsList list={newslist} />
-    </Background>
+    <Container>
+      <Section>
+        <NewsList list={newslist} />
+      </Section>
+    </Container>
   ))
   .add('Primary background', () => (
-    <Background color="primary">
-      <NewsList list={newslist} />
-    </Background>
+    <Container>
+      <Section backgroundColor="primary">
+        <NewsList list={newslist} />
+      </Section>
+    </Container>
   ));
 
-storiesOf('Background', module).add('Image', () => (
-  <Background image="https://via.placeholder.com/300">
-    <div style={{ height: 300 }} />
-  </Background>
+storiesOf('Section', module)
+  .add('Color', () => (
+    <Container>
+      <Section padding={1}>Default</Section>
+      <Section backgroundColor="primary" padding={1}>
+        Primary
+      </Section>
+      <Section backgroundColor="light" padding={1}>
+        Light
+      </Section>
+      <Section backgroundColor="dark" padding={1}>
+        Dark
+      </Section>
+    </Container>
+  ))
+  .add('Image', () => (
+    <Container>
+      <Section backgroundImage="https://via.placeholder.com/300">
+        <div style={{ height: 300 }} />
+      </Section>
+    </Container>
+  ));
+
+storiesOf('Highlight', module).add('index', () => (
+  <Container>
+    <Flex>
+      <Highlight
+        cta="Katso avoimet työpaikat"
+        img=""
+        title="Avoimet työpaikat"
+        text="Kerro meille unelmasi ja tule mukaan rakentamaan tulevaisuutta, jossa haluat elää. Katso kaikki Solitan avoimet työpaikat."
+      />
+      <Highlight
+        cta="Katso avoimet työpaikat"
+        img=""
+        title="Avoimet työpaikat"
+        text="Kerro meille unelmasi ja tule mukaan rakentamaan tulevaisuutta, jossa haluat elää. Katso kaikki Solitan avoimet työpaikat."
+      />
+    </Flex>
+  </Container>
 ));
 
-storiesOf('Reset', module).add('index', () => <Reset />);
+storiesOf('Navbar', module).add('index', () => (
+  <Navbar
+    items={[{ text: 'So Lit', url: '#' }, { text: 'Asiakkaat', url: '#' }]}
+    Logo={(
+      <>
+        {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+        <span aria-label="So Lit">🔥</span>
+      </>
+)}
+  />
+));
