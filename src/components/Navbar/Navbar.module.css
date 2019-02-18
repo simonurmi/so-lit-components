@@ -1,0 +1,23 @@
+.Navbar {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Navbar__List {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.Navbar__Link {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.Navbar__Logo {
+  font-size: 3rem;
+}
