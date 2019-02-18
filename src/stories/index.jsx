@@ -36,19 +36,19 @@ const newslist = [
     category: 'Uutinen',
     href: '#',
     id: 1,
-    title: 'Solita avaa toimiston Göteborgiin',
+    title: 'So Lit avaa toimiston Göteborgiin',
   },
   {
     category: 'Uutinen',
     href: '#',
     id: 2,
-    title: 'Skanska julkisti Suomen ensimmäisen digitaalisen asuntokaupan palvelun',
+    title: 'So Lit julkisti Suomen ensimmäisen digitaalisen asuntokaupan palvelun',
   },
   {
     category: 'Uutinen',
     href: '#',
     id: 3,
-    title: 'Solita laajentaa Saksaan - avaa toimiston Müncheniin',
+    title: 'So Lit laajentaa Saksaan - avaa toimiston Müncheniin',
   },
 ];
 
@@ -93,20 +93,24 @@ storiesOf('Section', module)
 
 storiesOf('Highlight', module).add('index', () => (
   <Container>
-    <Flex>
-      <Highlight
-        cta="Katso avoimet työpaikat"
-        img=""
-        title="Avoimet työpaikat"
-        text="Kerro meille unelmasi ja tule mukaan rakentamaan tulevaisuutta, jossa haluat elää. Katso kaikki Solitan avoimet työpaikat."
-      />
-      <Highlight
-        cta="Katso avoimet työpaikat"
-        img=""
-        title="Avoimet työpaikat"
-        text="Kerro meille unelmasi ja tule mukaan rakentamaan tulevaisuutta, jossa haluat elää. Katso kaikki Solitan avoimet työpaikat."
-      />
-    </Flex>
+    <Section padding={4}>
+      <Flex wrap>
+        <Highlight
+          alt="Alt text"
+          callToAction="Katso avoimet työpaikat"
+          img="https://via.placeholder.com/1000"
+          title="Avoimet työpaikat"
+          text="Kerro meille unelmasi ja tule mukaan rakentamaan tulevaisuutta, jossa haluat elää. Katso kaikki So Litin avoimet työpaikat."
+        />
+        <Highlight
+          alt="Alt text"
+          callToAction="Katso avoimet työpaikat"
+          img="https://via.placeholder.com/1000"
+          title="Avoimet työpaikat"
+          text="Kerro meille unelmasi ja tule mukaan rakentamaan tulevaisuutta, jossa haluat elää. Katso kaikki So Litin avoimet työpaikat."
+        />
+      </Flex>
+    </Section>
   </Container>
 ));
 
