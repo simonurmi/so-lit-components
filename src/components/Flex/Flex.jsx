@@ -4,10 +4,11 @@ import classNames from 'classnames';
 import styles from './Flex.module.css';
 
 const Flex = (props) => {
-  const { alignItems, children } = props;
+  const { alignItems, children, wrap } = props;
   const classes = classNames({
     [styles.Flex]: true,
     [styles['Flex--alignItemsCenter']]: alignItems === 'center',
+    [styles['Flex--wrap']]: wrap || wrap === 'wrap',
   });
   return <div className={classes}>{children}</div>;
 };
@@ -15,10 +16,12 @@ const Flex = (props) => {
 Flex.propTypes = {
   alignItems: PropTypes.string,
   children: PropTypes.node.isRequired,
+  wrap: PropTypes.string,
 };
 
 Flex.defaultProps = {
   alignItems: null,
+  wrap: false,
 };
 
 export default Flex;
