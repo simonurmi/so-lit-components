@@ -1,6 +1,20 @@
 .Highlight {
   flex-basis: calc(var(--container-width) / 2);
-  flex-grow: 0;
+  flex-grow: 1;
   padding-right: 2rem;
   padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Highlight__Image {
+  margin-bottom: 2rem;
+}
+
+.Highlight__Title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.Highlight__Text {
+  margin-bottom: 2rem;
 }
