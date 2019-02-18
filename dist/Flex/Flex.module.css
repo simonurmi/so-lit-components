@@ -5,3 +5,7 @@
 .Flex--alignItemsCenter {
   align-items: center;
 }
+
+.Flex--wrap {
+  flex-wrap: wrap;
+}

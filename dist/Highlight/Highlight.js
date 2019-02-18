@@ -13,23 +13,36 @@ var _Button = _interopRequireDefault(require("../Button/Button"));
 
 var _HighlightModule = _interopRequireDefault(require("./Highlight.module.css"));
 
+var _Intrinsic = _interopRequireDefault(require("../Intrinsic/Intrinsic"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Highlight = function Highlight(props) {
-  var cta = props.cta,
+  var alt = props.alt,
+      callToAction = props.callToAction,
       img = props.img,
       title = props.title,
       text = props.text;
   return _react.default.createElement("div", {
     className: _HighlightModule.default.Highlight
+  }, _react.default.createElement("div", {
+    className: _HighlightModule.default.Highlight__Image
+  }, _react.default.createElement(_Intrinsic.default, {
+    ratioX: 16,
+    ratioY: 9
   }, _react.default.createElement("img", {
-    alt: "",
+    alt: alt,
     src: img
-  }), _react.default.createElement("h3", null, title), _react.default.createElement("p", null, text), _react.default.createElement(_Button.default, null, cta));
+  }))), _react.default.createElement("h3", {
+    className: _HighlightModule.default.Highlight__Title
+  }, title), _react.default.createElement("p", {
+    className: _HighlightModule.default.Highlight__Text
+  }, text), _react.default.createElement(_Button.default, null, callToAction));
 };
 
 Highlight.propTypes = {
-  cta: _propTypes.default.string.isRequired,
+  alt: _propTypes.default.string.isRequired,
+  callToAction: _propTypes.default.string.isRequired,
   img: _propTypes.default.string.isRequired,
   title: _propTypes.default.string.isRequired,
   text: _propTypes.default.string.isRequired

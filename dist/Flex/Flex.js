@@ -21,8 +21,9 @@ var Flex = function Flex(props) {
   var _classNames;
 
   var alignItems = props.alignItems,
-      children = props.children;
-  var classes = (0, _classnames.default)((_classNames = {}, _defineProperty(_classNames, _FlexModule.default.Flex, true), _defineProperty(_classNames, _FlexModule.default['Flex--alignItemsCenter'], alignItems === 'center'), _classNames));
+      children = props.children,
+      wrap = props.wrap;
+  var classes = (0, _classnames.default)((_classNames = {}, _defineProperty(_classNames, _FlexModule.default.Flex, true), _defineProperty(_classNames, _FlexModule.default['Flex--alignItemsCenter'], alignItems === 'center'), _defineProperty(_classNames, _FlexModule.default['Flex--wrap'], wrap || wrap === 'wrap'), _classNames));
   return _react.default.createElement("div", {
     className: classes
   }, children);
@@ -30,10 +31,12 @@ var Flex = function Flex(props) {
 
 Flex.propTypes = {
   alignItems: _propTypes.default.string,
-  children: _propTypes.default.node.isRequired
+  children: _propTypes.default.node.isRequired,
+  wrap: _propTypes.default.string
 };
 Flex.defaultProps = {
-  alignItems: null
+  alignItems: null,
+  wrap: false
 };
 var _default = Flex;
 exports.default = _default;
