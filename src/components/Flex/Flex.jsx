@@ -16,7 +16,7 @@ const Flex = (props) => {
 Flex.propTypes = {
   alignItems: PropTypes.string,
   children: PropTypes.node.isRequired,
-  wrap: PropTypes.string,
+  wrap: PropTypes.oneOf([true, false, 'wrap', 'wrap-reverse']),
 };
 
 Flex.defaultProps = {
