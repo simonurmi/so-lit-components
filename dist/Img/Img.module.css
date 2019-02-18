@@ -1,0 +1,13 @@
+.Img {
+  max-width: 100%;
+  opacity: 0;
+  transition: 2s opacity;
+}
+
+.Img--lazyload {
+  opacity: 0;
+}
+
+.Img--lazyloaded {
+  opacity: 1;
+}

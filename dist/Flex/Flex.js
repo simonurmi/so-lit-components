@@ -32,7 +32,7 @@ var Flex = function Flex(props) {
 Flex.propTypes = {
   alignItems: _propTypes.default.string,
   children: _propTypes.default.node.isRequired,
-  wrap: _propTypes.default.string
+  wrap: _propTypes.default.oneOf([true, false, 'wrap', 'wrap-reverse'])
 };
 Flex.defaultProps = {
   alignItems: null,
