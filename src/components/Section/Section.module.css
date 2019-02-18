@@ -1,0 +1,48 @@
+.Section {
+  color: #000;
+  background-color: #fff;
+}
+
+.Section--bg-primary {
+  color: #fff;
+  background-color: #dc1e32;
+}
+
+.Section--bg-light {
+  background-color: #e6e6e6;
+}
+
+.Section--bg-dark {
+  color: #fff;
+  background-color: #282828;
+}
+
+.Section--bg-image {
+  background-position: center;
+  background-size: cover;
+}
+
+.Section--padding-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.Section--padding-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.Section--padding-3 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.Section--padding-4 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.Section--padding-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
