@@ -9,11 +9,11 @@ const NewsList = (props) => {
       {list.map(item => (
         <li className={styles.NewsList__Item} key={item.id}>
           <p className={styles.NewsList__Category}>{item.category}</p>
-          <p className={styles.NewsList__Title}>
+          <h3 className={styles.NewsList__Title}>
             <a className={styles.NewsList__Link} href={item.href}>
               {item.title}
             </a>
-          </p>
+          </h3>
         </li>
       ))}
     </ul>
