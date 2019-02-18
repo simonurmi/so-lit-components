@@ -13,6 +13,9 @@ import Flex from '../components/Flex/Flex';
 import Navbar from '../components/Navbar/Navbar';
 import Variables from '../components/Variables/Variables';
 import Section from '../components/Section/Section';
+import Footer from '../components/Footer/Footer';
+
+const placeholder = '/placeholder.jpg';
 
 storiesOf('Reset', module).add('index', () => <Reset />);
 
@@ -85,7 +88,7 @@ storiesOf('Section', module)
   ))
   .add('Image', () => (
     <Container>
-      <Section backgroundImage="https://via.placeholder.com/300">
+      <Section backgroundImage={placeholder}>
         <div style={{ height: 300 }} />
       </Section>
     </Container>
@@ -98,14 +101,14 @@ storiesOf('Highlight', module).add('index', () => (
         <Highlight
           alt="Alt text"
           callToAction="Katso avoimet työpaikat"
-          img="https://via.placeholder.com/1000"
+          img={placeholder}
           title="Avoimet työpaikat"
           text="Kerro meille unelmasi ja tule mukaan rakentamaan tulevaisuutta, jossa haluat elää. Katso kaikki So Litin avoimet työpaikat."
         />
         <Highlight
           alt="Alt text"
           callToAction="Katso avoimet työpaikat"
-          img="https://via.placeholder.com/1000"
+          img={placeholder}
           title="Avoimet työpaikat"
           text="Kerro meille unelmasi ja tule mukaan rakentamaan tulevaisuutta, jossa haluat elää. Katso kaikki So Litin avoimet työpaikat."
         />
@@ -114,14 +117,22 @@ storiesOf('Highlight', module).add('index', () => (
   </Container>
 ));
 
+const Logo = (
+  <>
+    {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+    <span aria-label="So Lit">🔥</span>
+  </>
+);
+
 storiesOf('Navbar', module).add('index', () => (
   <Navbar
     items={[{ text: 'So Lit', url: '#' }, { text: 'Asiakkaat', url: '#' }]}
-    Logo={(
-      <>
-        {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-        <span aria-label="So Lit">🔥</span>
-      </>
-)}
+    Logo={Logo}
+  />
+));
+
+storiesOf('Footer', module).add('index', () => (
+  <Footer
+    Logo={Logo}
   />
 ));
